@@ -7,5 +7,7 @@ document.getElementById('output').textContent = initDataRaw;
 
 // Отправляем боту
 document.getElementById('send').onclick = () => {
+    console.log('gagagagag')
+    console.log(initDataRaw)
   Telegram.WebApp.sendData(initDataRaw); // можно также отправить initData как JSON
 };
