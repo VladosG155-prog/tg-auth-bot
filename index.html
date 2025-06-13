@@ -7,7 +7,13 @@
   <body>
     <h1>Init Data:</h1>
     <pre id="output">Загрузка...</pre>
+<button id="send">Отправить данные боту</button>
 
+<script>
+  document.getElementById('send').onclick = () => {
+    Telegram.WebApp.sendData('initData: ' + Telegram.WebApp.initData);
+  };
+</script>
     <script>
       window.Telegram.WebApp.ready();
       const initData = Telegram.WebApp.initData;
