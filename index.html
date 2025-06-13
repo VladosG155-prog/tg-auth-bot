@@ -1,29 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Telegram InitData Example</title>
+  <meta charset="UTF-8" />
+  <title>InitData Extractor</title>
 </head>
 <body>
-  <h2>Telegram WebApp InitData</h2>
-  <pre id="initDataDisplay" style="white-space: pre-wrap; background: #eee; padding: 10px; border-radius: 5px;"></pre>
-  <button id="sendBtn">Отправить initData боту</button>
+  <h1>InitData</h1>
+  <pre id="output"></pre>
+  <button id="send">Отправить initData боту</button>
 
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
-  <script>
-    // Сохраняем initData при загрузке
-    const initData = Telegram.WebApp.initData;
-    console.log(Telegram.WebApp)
-    console.log('initDataUnsafe', Telegram.WebApp.initDataUnsafe);
-
-    // Показываем initData в <pre>
-    document.getElementById('initDataDisplay').textContent = initData;
-
-    // По кнопке отправляем initData боту
-    document.getElementById('sendBtn').onclick = () => {
-      Telegram.WebApp.sendData(initData);
-    };
-  </script>
+  <script type="module" src="./index.js"></script>
 </body>
 </html>
