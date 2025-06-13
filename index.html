@@ -10,9 +10,9 @@
 <button id="send">Отправить данные боту</button>
 
 <script>
-  document.getElementById('send').onclick = () => {
-    Telegram.WebApp.sendData('initData: ' + Telegram.WebApp.initData);
-  };
+ document.getElementById('send').onclick = () => {
+  Telegram.WebApp.sendData(initData);
+};
 </script>
     <script>
       window.Telegram.WebApp.ready();
