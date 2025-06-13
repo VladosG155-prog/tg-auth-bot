@@ -10,9 +10,9 @@
   <button id="send">Отправить initData боту</button>
 
   <script type="module">
-    import { retrieveLaunchParams } from '@telegram-apps/sdk';
+    import telegramAppssdk from 'https://cdn.jsdelivr.net/npm/@telegram-apps/sdk@3.10.1/+esm'
 
-const { initDataRaw, initData } = retrieveLaunchParams();
+const { initDataRaw, initData } = telegramAppssdk.retrieveLaunchParams();
 
 // Показываем initDataRaw на странице
 document.getElementById('output').textContent = initDataRaw;
